@@ -1035,7 +1035,7 @@
 
 <p align="center">`;
 
-                // Add social media badges
+               
                 if (emailSocial) {
                     readmeContent += `
   <a href="mailto:${emailSocial}">
@@ -1284,7 +1284,6 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
                 readmeContent += `
 </p>`;
 
-                // GitHub Stats Section
                 if (showStats || showStreak || showLanguages) {
                     readmeContent += `
 ## 📊 GitHub Stats
@@ -1310,7 +1309,6 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
 </div>`;
                 }
                 
-                // GitHub Trophies
                 if (showTrophies) {
                     readmeContent += `
 ## 🏆 GitHub Trophies
@@ -1322,7 +1320,6 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
 </div>`;
                 }
 
-                // Current Projects
                 if (currentProjects.some(project => project.trim())) {
                     readmeContent += `
 ## 🤖 Current Projects
@@ -1335,7 +1332,7 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
                     });
                 }
 
-                // Research Interests
+                
                 if (researchInterests.some(interest => interest.trim())) {
                     readmeContent += `
 ## 🎯 Research Interests
