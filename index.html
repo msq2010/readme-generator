@@ -938,17 +938,17 @@
             const colorOptions = document.querySelectorAll('.color-option');
             const skillItems = document.querySelectorAll('.skill-item');
             
-            // Store selected skills
+           
             const selectedSkills = new Set();
             
-            // Initialize the README
+            
             generateREADME();
             
-            // Add event listeners
+            
             generateBtn.addEventListener('click', generateREADME);
             copyBtn.addEventListener('click', copyToClipboard);
             
-            // Tab functionality
+           
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     tabs.forEach(t => t.classList.remove('active'));
@@ -963,7 +963,7 @@
                 });
             });
             
-            // Color picker functionality
+            
             colorOptions.forEach(option => {
                 option.addEventListener('click', () => {
                     colorOptions.forEach(opt => opt.classList.remove('active'));
@@ -972,7 +972,6 @@
                 });
             });
             
-            // Skill item click functionality
             skillItems.forEach(item => {
                 item.addEventListener('click', () => {
                     const skill = item.getAttribute('data-skill');
@@ -990,7 +989,7 @@
             });
             
             function generateREADME() {
-                // Get basic info
+                
                 const name = document.getElementById('name').value;
                 const tagline = document.getElementById('tagline').value;
                 const githubUsername = document.getElementById('githubUsername').value;
@@ -1003,7 +1002,7 @@
                 const currentProjects = document.getElementById('currentProjects').value.split('\n');
                 const researchInterests = document.getElementById('researchInterests').value.split('\n');
                 
-                // Get social media links
+               
                 const emailSocial = document.getElementById('emailSocial').value;
                 const twitter = document.getElementById('twitter').value;
                 const linkedin = document.getElementById('linkedin').value;
@@ -1017,14 +1016,12 @@
                 const discord = document.getElementById('discord').value;
                 const youtube = document.getElementById('youtube').value;
                 
-                // Get customization options
                 const showStats = document.getElementById('showStats').checked;
                 const showStreak = document.getElementById('showStreak').checked;
                 const showTrophies = document.getElementById('showTrophies').checked;
                 const showLanguages = document.getElementById('showLanguages').checked;
                 const activeColor = document.querySelector('.color-option.active').getAttribute('data-color');
-                
-                // Generate the README content
+            
                 let readmeContent = `<h1 align="center">
   Hi 👋, I'm ${name || 'Your Name'}
 </h1>
@@ -1397,7 +1394,7 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
 
 </div>`;
 
-                // Update the preview
+                
                 previewContent.textContent = readmeContent;
             }
             
@@ -1409,7 +1406,6 @@ ${funFact ? `- ⚡ **Fun fact:** ${funFact}\n` : ''}
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
                 
-                // Visual feedback
                 const originalText = copyBtn.innerHTML;
                 copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 copyBtn.style.background = '#28a745';
