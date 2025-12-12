@@ -1,6 +1,6 @@
 # GitHub Portfolio README Generator
 
-A powerful, user-friendly web application that helps developers create professional GitHub profile README files with ease.
+A powerful, user-friendly web application that helps developers create professional GitHub profile README files with ease
 
 ## Features
 
